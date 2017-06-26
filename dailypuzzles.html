@@ -4,8 +4,15 @@
 		<title>Daily Puzzles</title>
 	</head>
 	<body>
+		<h3>Cryptoquote</h3>
+		<blockquote id="qod-quote">
+			... loading ...
+		</blockquote>
+		
 		<h3>Sudoku</h3>
 		<iframe src="http://gadget.puzzlerscave.com/dailysudoku.php" frameborder="0" height="370" scrolling="no" width="300"></iframe>
 	</body>
-	<script type="text/javascript" src="js/jquery-3.1.0.min.js" />
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/cryptoquote.js"></script>
+	<script src='http://quotesondesign.com/api/3.0/api-3.0.js?id=qod-quote&formatter=cryptoquote.formatQuote'></script>
 </html>
