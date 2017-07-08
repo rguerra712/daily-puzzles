@@ -1,0 +1,15 @@
+{
+  "name": "daily-puzzles",
+  "version": "1.0.0",
+  "description": "A single webpage that contains a printable daily list of puzzles",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*-test.js"
+  },
+  "author": "R. Stephen Guerra",
+  "license": "Apache-20",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+  }
+}
