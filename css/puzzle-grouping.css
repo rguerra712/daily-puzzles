@@ -1,0 +1,15 @@
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.thin-puzzle {
+    width: 300px;
+    margin: 10px;
+}
+
+.thick-puzzle {
+    height: 700px;
+    width: 700px;
+    margin: 10px;
+}
