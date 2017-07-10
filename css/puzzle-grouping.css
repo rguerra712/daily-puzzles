@@ -13,3 +13,13 @@
     width: 700px;
     margin: 10px;
 }
+
+body {
+    margin: 0mm 0mm 0mm 0mm;
+}
+
+@media print {
+    @page {
+        size: landscape
+    }
+}
