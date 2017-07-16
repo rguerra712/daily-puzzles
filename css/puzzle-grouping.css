@@ -5,17 +5,24 @@
 
 .thin-puzzle {
     width: 300px;
+    height: 600px;
     margin: 10px;
 }
 
 .thick-puzzle {
-    height: 700px;
+    height: 900px;
     width: 700px;
     margin: 10px;
 }
 
-body {
-    margin: 0mm 0mm 0mm 0mm;
+#crossword {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
 }
 
 @media print {
