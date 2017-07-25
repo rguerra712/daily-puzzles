@@ -10,7 +10,7 @@
 }
 
 .thick-puzzle {
-    height: 900px;
+    height: 1000px;
     width: 700px;
     margin: 10px;
 }
@@ -23,6 +23,10 @@
     -o-transform-origin: top left;
     -ms-transform-origin: top left;
     transform-origin: top left;
+}
+
+body {
+    margin: 0mm 0mm 0mm 0mm;
 }
 
 @media print {

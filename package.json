@@ -10,6 +10,9 @@
   "license": "Apache-20",
   "dependencies": {
     "chai": "^4.0.2",
+    "chromedriver": "^2.30.1",
     "mocha": "^3.4.2",
+    "robotjs": "^0.4.7",
+    "selenium": "^2.20.0"
   }
 }
