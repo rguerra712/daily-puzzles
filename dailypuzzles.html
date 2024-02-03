@@ -3,31 +3,51 @@
 
 <head>
     <title>Daily Puzzles</title>
-    <link rel="stylesheet" type="text/css" href="css/puzzle-grouping.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/puzzle-grouping.css">
+    </link>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Style for the three images on the first row */
+        .container .small-image {
+            width: 33.33%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        /* Style for the large image on the bottom row */
+        .container .large-image {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 30px;
+            padding-inline: 75px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class='flex-container'>
-        <div class='thin-puzzle'>
-            <h3>Cryptoquote</h3>
-            <blockquote id="qod-quote">
-                ... loading ...
-            </blockquote>
-
-            <h3>Sudoku</h3>
-            <iframe src="http://gadget.puzzlerscave.com/dailysudoku.php" frameborder="0" height="70%" scrolling="no" width="90%"></iframe>
-
-            <button id="print" onclick="window.print()">Print</button>
-        </div>
-        <div class='thick-puzzle'>
-            <h3>Crossword</h3>
-            <iframe id="crossword" src="" frameborder="0" height="100%" scrolling="no" width="100%"></iframe>
-        </div>
+    <div class='container'>
+        <img id="sudoku" class="small-image" src="" alt="Sudoku of the day" width="50%"></img>
+        <img id="cryptoquote" class="small-image" src="" alt="Cryptoquote of the day"></img>
+        <img id="jumble" class="small-image" src="" alt="Jumble of the day"></img>
+        <img id="crossword" class="large-image" src="" alt="Crossword of the day"></img>
     </div>
 </body>
-<script src="js/jquery-3.1.0.min.js"></script>
-<script src="js/cryptoquote.js"></script>
-<script src="js/crossword.js"></script>
-<script src='http://quotesondesign.com/api/3.0/api-3.0.js?id=qod-quote&formatter=cryptoquote.formatQuote'></script>
+
+<script>
+    // Get the current date
+    var today = new Date();
+    // Get a string that is the month and day padded with 0 if needed, for example, February 2 would be 0202
+    var monthDay = (today.getMonth() + 1).toString().padStart(2, '0') + (today.getDate()).toString().padStart(2, '0');
+
+    // Set the image source to the URL for the current date
+    document.getElementById('cryptoquote').src = 'https://cdn.wehco.com/adg/puzzles/' + monthDay + '/quote.jpg';
+    document.getElementById('sudoku').src = 'https://cdn.wehco.com/adg/puzzles/' + monthDay + '/kfssudoku.jpg';
+    document.getElementById('jumble').src = 'https://cdn.wehco.com/adg/puzzles/' + monthDay + '/jumblenh.jpg';
+    document.getElementById('crossword').src = `https://cdn.wehco.com/adg/puzzles/${monthDay}/nytxw2.${monthDay}.jpg`;
+</script>
 
 </html>
