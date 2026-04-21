@@ -8,17 +8,14 @@
     <style>
         .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 24px;
+            flex-wrap: wrap;
         }
 
         /* Style for the three images on the first row */
         .container .small-image {
-            width: min(100%, 680px);
-            height: auto;
+            width: 33.33%;
             box-sizing: border-box;
-            padding: 8px;
+            padding: 20px;
         }
 
         /* Style for the large image on the bottom row */
@@ -28,46 +25,15 @@
             padding: 30px;
             padding-inline: 75px;
         }
-
-        @page {
-            size: letter portrait;
-            margin: 0.2in;
-        }
-
-        @media print {
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            .container {
-                width: 100%;
-                max-width: 7.9in;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5in;
-            }
-
-            .container .small-image {
-                width: 100%;
-                max-width: 6.9in;
-                max-height: 2.95in;
-                padding: 0;
-                object-fit: contain;
-                display: block;
-            }
-        }
     </style>
 </head>
 
 <body>
     <div class='container'>
-        <img id="sudoku" class="small-image" src="" alt="Sudoku of the day"></img>
+        <img id="sudoku" class="small-image" src="" alt="Sudoku of the day" width="50%"></img>
         <img id="cryptoquote" class="small-image" src="" alt="Cryptoquote of the day"></img>
         <img id="jumble" class="small-image" src="" alt="Jumble of the day"></img>
+        <img id="crossword" class="large-image" src="" alt="Crossword of the day"></img>
     </div>
 </body>
 
